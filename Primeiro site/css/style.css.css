@@ -1,0 +1,132 @@
+<<<<<<< HEAD
+/* Estilos básicos para mobile-first */
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Layout para telas maiores */
+
+@media (min-width:768px) {
+    nav ul li {
+        margin-right: 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }    
+
+    .logo {
+        margin-right: 20px;
+    }
+
+    section {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+=======
+/* Estilos básicos para mobile-first */
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 15px auto;
+    max-width: 220px;
+    height: auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 10px 0 0 0;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+section {
+    padding: 40px 15px;
+    margin: 40px auto;
+    max-width: 1200px;
+    text-align: left;
+}
+
+section p {
+    text-align: left;
+    margin: 0;
+    margin-left: 0;
+    max-width: 650px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #333;
+    display: block;
+    width: fit-content;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* Layout para telas maiores */
+
+@media (min-width:768px) {
+    nav ul li {
+        margin-right: 20px;
+    }
+
+    header {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }    
+
+    .logo {
+        max-width: 500px;
+    }
+
+    section {
+        padding: 70px 30px;
+    }
+
+    section p {
+        max-width: 500px;
+    }
+>>>>>>> 771016e0c4ba19d8a298493cbb926571f722fd34
+}
