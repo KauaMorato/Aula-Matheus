@@ -1,9 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-
-import Dashboard from './React/cdpages/Dashboard';
-import Relatorios from './React/cdpages/Relatorios';
-import Configuracoes from './React/cdpages/Configuracoes';
-import Suporte from './React/cdpages/Suporte';
+import { Dashboard, Relatorios, Configuracoes, Suporte } from './React/cdpages';
 
 function App() {
     return (

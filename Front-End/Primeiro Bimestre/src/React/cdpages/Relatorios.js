@@ -1,5 +1,5 @@
 function Relatorios() {
-    return <h1>Relatorios</h1>
+    return <h1>Relatórios</h1>;
 }
 
 export default Relatorios;

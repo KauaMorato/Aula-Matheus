@@ -1,5 +1,5 @@
 function Configuracoes() {
-    return <h1>Configuracoes</h1>
+    return <h1>Configurações</h1>;
 }
 
 export default Configuracoes;
