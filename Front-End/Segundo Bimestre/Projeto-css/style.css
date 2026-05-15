@@ -1,0 +1,97 @@
+/* ===== FONTE ===== */
+body {
+  font-family: 'Sora', sans-serif;
+}
+
+/* ===== VARIÁVEIS GLOBAIS ===== */
+:root {
+  --primary-color: #3498db;   /* Azul */
+  --secondary-color: #2ecc71; /* Verde */
+  --font-size-base: 16px;
+  --font-size-large: 20px;
+  --spacing-base: 10px;
+}
+
+/* ===== MIXIN: SOMBRA ===== */
+@mixin box-shadow($color, $intensity) {
+  box-shadow: 0 4px $intensity rgba($color, 0.3);
+}
+
+/* ===== MIXIN: TRANSIÇÃO ===== */
+@mixin transition($property, $duration) {
+  transition: $property $duration ease-in-out;
+}
+
+/* ===== MIXIN: TEXTO RESPONSIVO ===== */
+@mixin responsive-text($min-size, $max-size) {
+  font-size: $min-size;
+  @media (min-width: 768px) {
+    font-size: $max-size;
+  }
+}
+
+/* ===== BOTÃO ===== */
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: var(--spacing-base) 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  @include responsive-text(14px, 18px);
+  @include box-shadow(blue, 8px);
+  @include transition(all, 0.3s); /* ← aqui fora para a animação funcionar */
+
+  /* Nesting: estilo do hover DENTRO do bloco do botão */
+  &:hover {
+    background-color: var(--secondary-color);
+  }
+}
+
+/* ===== CARTÃO DE PRODUTO ===== */
+.card {
+  background: linear-gradient(to bottom, #ffffff, #f0f4f8);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  @include box-shadow(black, 5px);
+
+  /* Nesting: área de imagem DENTRO do .card */
+  .card-image {
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 6px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+  }
+
+  /* Nesting: título DENTRO do .card */
+  .card-title {
+    color: var(--primary-color);
+    font-size: var(--font-size-large);
+    margin-bottom: 8px;
+  }
+
+  /* Nesting: descrição DENTRO do .card */
+  .card-description {
+    font-size: var(--font-size-base);
+    color: #333;
+    line-height: 1.6;
+  }
+}
+
+/* ===== RESPONSIVIDADE (telas menores que 768px) ===== */
+@media (max-width: 768px) {
+  .card {
+    padding: var(--spacing-base);
+    max-width: 100%;
+  }
+  .button {
+    font-size: 14px;
+    width: 100%;
+  }
+}
